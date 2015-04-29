@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+		<title>Result</title>
+		<meta name="Description" content="" />
+		<meta name="Keywords" content="" />
+		<script type="text/javascript" src="ichart.1.2.min.js"></script>
+		<script type="text/javascript">
+			var data = new Array();
+			var json = window.PlotGraph.getJson(); //得到MainActivity中转换出的json字符串
+			eval('data='+json);//得到json数据
+
+$(function(){	
+	new iChart.LineBasic2D({
+		sub_option:{
+			smooth: false,
+			point_size: 10,
+			hollow: false
+		},
+		animation:true,
+		render : 'canvasDiv', //渲染的Dom目标,canvasDiv为Dom的ID
+		data: data, //绑定数据
+		title : 'Experiment Result', //设置标题
+		showpercent:true, //显示百分比
+		decimalsnum:2, 
+		width : 1150, //设置宽度，默认单位为px
+		height : 550, //设置高度，默认单位为px
+		align:'left',
+		offsetx:50,
+		legend : {
+			enable : true,
+			row:'max',
+			column:1
+		},
+		coordinate:{ //配置自定义坐标轴
+			grids:{
+				vertical:{
+					way:'share_alike',
+					value:12
+				}
+			},
+			axis:{
+				enable:true,
+				width:[0,0,2,2],
+				color:'#333333'
+			},
+			scale:[{ //配置自定义值轴
+				 width:800,
+				 position:'left', //配置左值轴	
+				 start_scale:0, //设置开始刻度为0
+				 end_scale:40, //设置结束刻度为40
+				 scale_space:8, //设置刻度间距为8
+				 listeners:{ //配置事件
+					parseText:function(t,x,y){ //设置解析值轴文本
+						return {text:t+"cm"}
+					}
+				}
+			}]
+		}
+	}).draw(); //调用绘图方法开始绘图
+});
+			</script>
+		</head>
+		<body>
+			<div id='canvasDiv'></div>
+		</body>
+</html>

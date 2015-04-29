@@ -1,0 +1,61 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+	<LinearLayout 
+	    android:baselineAligned="false" 
+	    android:layout_width="wrap_content"
+	    android:layout_height="fill_parent"
+	    android:paddingLeft="@dimen/container_right"
+	    android:paddingRight="@dimen/container_right"
+	    android:layout_gravity="center"
+	    android:orientation="vertical" >
+
+		    <TextView
+		        android:id="@+id/textView"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="@dimen/middle_content"
+		        android:textSize="@dimen/qn"
+		        android:text="Resume Session" />
+		    		    
+		        
+			<Spinner
+		        android:id="@+id/spinner_session"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+			    android:layout_marginTop="@dimen/big_gap"
+			    android:layout_marginBottom="@dimen/big_gap"
+		        android:textSize="@dimen/normal"
+		        android:layout_gravity="center" />
+		    
+		    <Button
+		        android:id="@+id/resume_btn_continue"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:layout_marginTop="@dimen/big_gap"
+		        android:background="@drawable/button_next"
+		        android:onClick="nextStep"
+		        android:text="Continue"
+			    android:textSize="@dimen/button"/>
+
+		    <Button
+		        android:id="@+id/resume_btn_back"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:layout_marginTop="@dimen/big_gap"
+		        android:background="@drawable/button_next"
+		        android:onClick="back"
+		        android:text="Back"
+			    android:textSize="@dimen/button"/>
+		    
+	</LinearLayout>
+</FrameLayout>

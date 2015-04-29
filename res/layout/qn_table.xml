@@ -1,0 +1,314 @@
+<FrameLayout 
+    android:id="@+id/table_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+	<LinearLayout 
+	    android:baselineAligned="false" 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:paddingLeft="@dimen/container_left"
+	    android:paddingRight="@dimen/container_right"
+	    android:orientation="vertical" >
+	    
+	    
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:paddingLeft="@dimen/container_left">
+	        
+	        <TextView
+	            android:id="@+id/table_title"
+	            android:layout_width="0dp"
+	            android:layout_weight = "5"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_horizontal"
+	            android:paddingTop="@dimen/medium_gap"
+	            android:text="Problem 1"
+	            android:textSize="@dimen/heading" />
+		    
+		    <LinearLayout 
+		        android:layout_width="0dp"
+		        android:layout_weight = "3"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:layout_gravity="right"
+		        android:paddingTop="@dimen/medium_gap">
+		        
+		        <Button
+		            android:id="@+id/table_prev"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/button_previous"
+		            android:onClick="prevStep"
+		            android:text="Previous"
+		            android:textSize="@dimen/button" />
+		        
+		        <TextView
+		            android:id="@+id/table_progress"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_horizontal"
+		            android:paddingLeft="@dimen/between_col"
+		            android:paddingRight="@dimen/between_col"
+		            android:text="4/20"
+		            android:textSize="@dimen/normal" />
+		        
+		        <Button
+		            android:id="@+id/table_next"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="right"
+		            android:background="@drawable/button_next"
+		            android:onClick="nextStep"
+		            android:text="Next"
+		            android:textSize="@dimen/button" />
+		    
+		    </LinearLayout>
+		    
+		 </LinearLayout>
+
+<TableLayout 
+    android:id="@+id/tableLayout1"
+    android:layout_width="1000dp"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/small_gap"
+    android:layout_gravity="center">
+ 
+    <!-- 2 columns -->
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+ 
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_weight="1"
+            android:text="Week"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"/>
+ 
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_weight="3"
+            android:text="Control Set"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"/>
+        
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_weight="5"
+            android:text="Set-up A"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"/>
+        
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_weight="5"
+            android:text="Set-up B"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"/>
+        
+</TableRow>
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+ 
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_weight="1"
+            android:text="1"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"/>
+ 
+        <EditText
+            android:id="@+id/EditText_1_1"
+            android:hint=""
+            android:layout_weight="3"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"
+            android:inputType="number"
+            android:tag="1,1"/>
+        
+        <EditText
+            android:id="@+id/EditText_1_2"
+            android:hint=""
+            android:layout_weight="5"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"
+            android:inputType="number"
+            android:tag="1,2"/>
+        
+        <EditText
+            android:id="@+id/EditText_1_3"
+            android:hint=""
+            android:layout_weight="5"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"
+            android:inputType="number"
+            android:tag="1,3"/>
+        
+</TableRow>
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+ 
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_weight="1"
+            android:text="2"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"/>
+ 
+        <EditText
+            android:id="@+id/EditText_2_1"
+            android:hint=""
+            android:layout_weight="3"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"
+            android:inputType="number"
+            android:tag="2,1"/>
+        
+        <EditText
+            android:id="@+id/EditText_2_2"
+            android:hint=""
+            android:layout_weight="5"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"
+            android:inputType="number"
+            android:tag="2,2"/>
+        
+        <EditText
+            android:id="@+id/EditText_2_3"
+            android:hint=""
+            android:layout_weight="5"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"
+            android:inputType="number"
+            android:tag="2,3"/>
+        
+</TableRow>
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+ 
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_weight="1"
+            android:text="3"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"/>
+ 
+        <EditText
+            android:id="@+id/EditText_3_1"
+            android:hint=""
+            android:layout_weight="3"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"
+            android:inputType="number"
+            android:tag="3,1"/>
+        
+        <EditText
+            android:id="@+id/EditText_3_2"
+            android:hint=""
+            android:layout_weight="5"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"
+            android:inputType="number"
+            android:tag="3,2"/>
+        
+        <EditText
+            android:id="@+id/EditText_3_3"
+            android:hint=""
+            android:layout_weight="5"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"
+            android:inputType="number"
+            android:tag="3,3"/>
+        
+</TableRow>
+        <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+ 
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_weight="1"
+            android:text="4"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"/>
+ 
+        <EditText
+            android:id="@+id/EditText_4_1"
+            android:hint=""
+            android:layout_weight="3"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"
+            android:inputType="number"
+            android:tag="4,1"/>
+        
+        <EditText
+            android:id="@+id/EditText_4_2"
+            android:hint=""
+            android:layout_weight="5"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"
+            android:inputType="number"
+            android:tag="4,2"/>
+        
+        <EditText
+            android:id="@+id/EditText_4_3"
+            android:hint=""
+            android:layout_weight="5"
+            android:textSize="@dimen/button"
+            android:background="@drawable/tablegrid"
+            android:padding="@dimen/table_gap"
+            android:inputType="number"
+            android:tag="4,3"/>
+        
+</TableRow>
+    
+</TableLayout>
+
+		        <Button
+		            android:id="@+id/table_plot"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="right"
+		            android:background="@drawable/button_next"
+		            android:onClick="plotGraph"
+		            android:text="Plot graph"
+		            android:textSize="@dimen/button" />
+
+	</LinearLayout>
+</FrameLayout>

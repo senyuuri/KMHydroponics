@@ -1,0 +1,158 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+	<LinearLayout 
+	    android:baselineAligned="false" 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingLeft="@dimen/container_left"
+	    android:paddingRight="@dimen/container_right"
+	    android:orientation="vertical" >
+	    
+	    
+<LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:paddingLeft="@dimen/container_left">
+	        
+	        <TextView
+	            android:id="@+id/cam_station_name"
+	            android:layout_width="0dp"
+	            android:layout_weight = "5"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_horizontal"
+	            android:paddingTop="@dimen/medium_gap"
+	            android:text="Problem 1"
+	            android:textSize="@dimen/heading" />
+		    
+		    <LinearLayout 
+		        android:layout_width="0dp"
+		        android:layout_weight = "3"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:layout_gravity="right"
+		        android:paddingTop="@dimen/medium_gap">
+		        
+		        <Button
+		            android:id="@+id/cam_btn_prev"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/button_previous"
+		            android:onClick="prevStep"
+		            android:text="Previous"
+		            android:textSize="@dimen/button" />
+		        
+		        <TextView
+		            android:id="@+id/cam_progress"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_horizontal"
+		            android:paddingLeft="@dimen/between_col"
+		            android:paddingRight="@dimen/between_col"
+		            android:text="4/20"
+		            android:textSize="@dimen/normal" />
+		        
+		        <Button
+		            android:id="@+id/cam_btn_next"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="right"
+		            android:background="@drawable/button_next"
+		            android:onClick="nextStep"
+		            android:text="Next"
+		            android:textSize="@dimen/button" />
+		    
+		    </LinearLayout>
+		    </LinearLayout>
+		 <TextView
+		     android:id="@+id/cam_question"
+		     android:layout_width="wrap_content"
+		     android:layout_height="wrap_content"
+		     android:layout_gravity="center"
+		     android:paddingLeft="@dimen/container_right"
+		     android:paddingTop="@dimen/small_gap"
+		     android:text="Question: Take two photos."
+		     android:textSize="@dimen/normal" />
+	    
+		 <LinearLayout 
+		    android:baselineAligned="false"
+		    android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:paddingTop="@dimen/medium_gap">
+		    <FrameLayout 
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1">
+		        
+		        <ImageView
+		            android:id="@+id/cam_img1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center"
+		            android:scaleType="centerCrop"
+		            android:src="@drawable/image_holder" />
+
+		        <TextView
+		            android:id="@+id/cam_img1_text"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center"
+		            android:text="Your image"
+		            android:textColor="#FFFFFF"
+		            android:textSize="30sp" />
+		        
+	        	<Button
+	        	    android:id="@+id/cam_img1_btn"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:layout_gravity="bottom|right"
+	        	    android:background="@drawable/button_camera"
+	        	    android:onClick="preTakePhoto1" />
+		        
+		    </FrameLayout>
+		    
+		    <FrameLayout 
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1">
+		        
+		        <ImageView
+		            android:id="@+id/cam_img2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center"
+		            android:scaleType="centerCrop"
+		            android:src="@drawable/image_holder" />
+
+		        <TextView
+		            android:id="@+id/cam_img2_text"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center"
+		            android:text="Your image"
+		            android:textColor="#FFFFFF"
+		            android:textSize="30sp" />
+
+	        	<Button
+	        	    android:id="@+id/cam_img2_btn"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:layout_gravity="bottom|right"
+	        	    android:background="@drawable/button_camera"
+	        	    android:onClick="preTakePhoto2" />
+
+		        		    </FrameLayout>
+		    		     
+		 </LinearLayout>
+
+	</LinearLayout>
+</FrameLayout>

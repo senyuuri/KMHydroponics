@@ -1,0 +1,96 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+	<LinearLayout 
+	    android:baselineAligned="false" 
+	    android:layout_width="wrap_content"
+	    android:layout_height="fill_parent"
+	    android:paddingLeft="@dimen/container_left"
+	    android:paddingRight="@dimen/container_right"
+	    android:layout_gravity="center"
+	    android:orientation="vertical" >
+
+		    <TextView
+		        android:id="@+id/textView1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="@dimen/container_right"
+		        android:text="P4 Project Work Hydroponics"
+		        android:textSize="@dimen/heading" />
+		    
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="@dimen/small_gap"
+		        android:layout_gravity="center"
+		        android:text="Keming Primary School   Primary 4"
+		        android:textSize="@dimen/normal" />
+		    
+		    <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:orientation="horizontal" 
+		        android:paddingTop="@dimen/container_right">
+		    
+		    <Button
+		        android:id="@+id/bt_upload"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginRight="@dimen/container_right"
+		        android:background="@drawable/button_next"
+		        android:onClick="uploadAll"
+		        android:text="Upload"
+		        android:textColor="#754C28"
+		        android:textSize="@dimen/button" />
+		
+		    <Button
+		        android:id="@+id/bt_update"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/button_next"
+		        android:onClick="updateCheck"
+		        android:text="Update"
+		        android:textColor="#754C28"
+		        android:textSize="@dimen/button" />
+		    
+		    </LinearLayout>
+		
+		    <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:orientation="horizontal" 
+		        android:paddingTop="@dimen/big_gap">
+		    <Button
+		        android:id="@+id/bt_resume"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginRight="@dimen/container_right"
+		        android:background="@drawable/button_next"
+		        android:onClick="resume"
+		        android:text="Resume"
+		        android:textColor="#754C28"
+		        android:textSize="@dimen/button" />
+		    
+		    <Button
+		        android:id="@+id/bt_start"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/button_next"
+		        android:onClick="nextStep"
+		        android:text="Start"
+		        android:textColor="#754C28"
+		        android:textSize="@dimen/button"/>
+		    </LinearLayout>
+
+	</LinearLayout>
+
+</FrameLayout>

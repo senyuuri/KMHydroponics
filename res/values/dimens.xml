@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="container_left">40dp</dimen>
+    <dimen name="container_right">60dp</dimen>
+    <dimen name="big_gap">30dp</dimen>
+    <dimen name="medium_gap">22dp</dimen>
+    <dimen name="small_gap">15dp</dimen>
+    <dimen name="table_gap">10dp</dimen>
+    <dimen name="setup_gap">5dp</dimen>
+    <dimen name="between_col">0dp</dimen>
+    <dimen name="middle_content">100dp</dimen>
+    <dimen name="between_row">40dp</dimen>
+    <dimen name="ssuper">80sp</dimen>
+    <dimen name="heading">65sp</dimen>
+    <dimen name="button">40sp</dimen>
+    <dimen name="qn">35sp</dimen>
+    <dimen name="normal">30sp</dimen>
+    <dimen name="mid">25sp</dimen>
+    <dimen name="solution">20sp</dimen>
+    
+    
+</resources>

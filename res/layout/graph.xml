@@ -1,0 +1,47 @@
+<FrameLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+	<LinearLayout 
+	    android:baselineAligned="false" 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:paddingLeft="@dimen/container_left"
+	    android:paddingRight="@dimen/container_right"
+	    android:orientation="vertical" >
+	    
+	    
+	    <LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_gravity="right"
+	        android:layout_margin="@dimen/small_gap"
+	        android:paddingLeft="@dimen/container_left">
+	        
+		        
+		        
+		        <Button
+		            android:id="@+id/plot_prev"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/button_next"
+		            android:onClick="nextStep"
+		            android:text="Back"
+		            android:textSize="@dimen/button" />
+		    
+		 </LinearLayout>
+
+<WebView
+    android:id="@+id/plot_webview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+/>
+
+	</LinearLayout>
+</FrameLayout>

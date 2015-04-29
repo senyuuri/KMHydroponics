@@ -1,0 +1,161 @@
+<FrameLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+	<LinearLayout 
+	    android:baselineAligned="false" 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:paddingLeft="@dimen/container_left"
+	    android:paddingRight="@dimen/container_right"
+	    android:orientation="vertical" >
+	    
+	    
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:paddingLeft="@dimen/container_left">
+	        
+	        <TextView
+	            android:id="@+id/qa_station_name"
+	            android:layout_width="0dp"
+	            android:layout_weight = "5"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_horizontal"
+	            android:paddingTop="@dimen/medium_gap"
+	            android:text="Problem 1"
+	            android:textSize="@dimen/heading" />
+		    
+		    <LinearLayout 
+		        android:layout_width="0dp"
+		        android:layout_weight = "3"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:layout_gravity="right"
+		        android:paddingTop="@dimen/medium_gap">
+		        
+		        <Button
+		            android:id="@+id/qa_prev"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/button_previous"
+		            android:onClick="prevStep"
+		            android:text="Previous"
+		            android:textSize="@dimen/button" />
+		        
+		        <TextView
+		            android:id="@+id/qa_progress"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_horizontal"
+		            android:paddingLeft="@dimen/between_col"
+		            android:paddingRight="@dimen/between_col"
+		            android:text="4/20"
+		            android:textSize="@dimen/normal" />
+		        
+		        <Button
+		            android:id="@+id/qa_next"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="right"
+		            android:background="@drawable/button_next"
+		            android:onClick="nextStep"
+		            android:text="Next"
+		            android:textSize="@dimen/button" />
+		    
+		    </LinearLayout>
+		    </LinearLayout>
+		    
+	    
+			<TextView
+		        android:id="@+id/qa_question"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:paddingLeft="@dimen/container_left"
+		        android:paddingTop="@dimen/big_gap"
+		        android:text="Is this a question?"
+		        android:textSize="@dimen/qn" />
+			
+			<LinearLayout 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center_horizontal"
+			    android:orientation="horizontal"
+			    >
+		    
+			
+			<LinearLayout 
+			    android:layout_width="500dp"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:background="#88FFFFFF">
+
+			<TextView
+		        android:id="@+id/qa_question"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:paddingLeft="@dimen/container_left"
+		        android:paddingTop="@dimen/big_gap"
+		        android:text="title 1"
+		        android:textSize="@dimen/qn" />
+			
+		    <EditText
+		        android:id="@+id/qa_input"
+		        android:inputType="text"
+		        android:layout_width="fill_parent"
+		        android:layout_height="200dp"
+		        android:hint="Type in your answer here."
+		        android:paddingTop="@dimen/big_gap"
+		        android:textSize="@dimen/normal" />
+		    </LinearLayout>
+		    <LinearLayout 
+			    android:layout_width="500dp"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:background="#88FFFFFF"
+			    android:layout_marginLeft="@dimen/big_gap">
+
+			<TextView
+		        android:id="@+id/qa_question"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:paddingLeft="@dimen/container_left"
+		        android:paddingTop="@dimen/big_gap"
+		        android:text="title 1"
+		        android:textSize="@dimen/qn" />
+			
+		    <EditText
+		        android:id="@+id/qa_input"
+		        android:inputType="text"
+		        android:layout_width="fill_parent"
+		        android:layout_height="200dp"
+		        android:hint="Type in your answer here."
+		        android:paddingTop="@dimen/big_gap"
+		        android:textSize="@dimen/normal" />
+		    </LinearLayout>
+		    
+		    </LinearLayout>
+	        
+		    <Button
+		        android:id="@+id/qa_solution"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/button_next"
+		        android:layout_gravity="right"
+		        android:onClick="showSolution"
+		        android:paddingRight="@dimen/big_gap"
+		        android:layout_marginTop="@dimen/big_gap"
+		        android:text="Submit &amp; check answer"
+		        android:textSize="@dimen/button" />
+
+	</LinearLayout>
+</FrameLayout>

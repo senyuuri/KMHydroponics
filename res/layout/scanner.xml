@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <FrameLayout
+    android:id="@+id/cameraPreview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:layout_marginLeft="250dp"
+    android:layout_marginRight="250dp"
+  />
+
+  <TextView
+    android:id="@+id/scanText"
+    android:text="Scanning..."
+    android:textSize="30sp"
+    android:layout_height="wrap_content" 
+    android:layout_width="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="20dp"
+    android:layout_gravity="center">
+  </TextView>
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+	<Button
+	    android:id="@+id/return_scanner"
+	    android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Back"
+		android:textSize="@dimen/button"
+		android:textColor="#FFFF44"
+		android:background="@drawable/button_previous"
+		android:layout_marginLeft="@dimen/container_left"/>
+
+	<Button
+	    android:id="@+id/ScanButton"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center"
+	    android:drawableLeft="@drawable/scanner"
+	    android:paddingLeft="20dp"
+	    android:paddingRight="20dp"
+	    android:text="Scan again"
+	    android:textSize="30sp" />
+	  
+	</FrameLayout>
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+	<LinearLayout 
+	    android:baselineAligned="false" 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:paddingLeft="@dimen/container_left"
+	    android:paddingRight="@dimen/container_right"
+	    android:orientation="vertical" >
+	    
+	    
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:paddingLeft="@dimen/container_left">
+	        
+	        <TextView
+	            android:id="@+id/station_title"
+	            android:layout_width="0dp"
+	            android:layout_weight = "5"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_horizontal"
+	            android:paddingTop="@dimen/medium_gap"
+	            android:text="Let's move to ..."
+	            android:textSize="@dimen/button" />
+		    
+		    <LinearLayout 
+		        android:layout_width="0dp"
+		        android:layout_weight = "3"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:layout_gravity="right"
+		        android:paddingTop="@dimen/medium_gap">
+		        
+		        <Button
+		            android:id="@+id/station_prev"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/button_previous"
+		            android:onClick="prevStep"
+		            android:text="Previous"
+		            android:textSize="@dimen/button" />
+		        
+		        <TextView
+		            android:id="@+id/station_progress"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_horizontal"
+		            android:paddingLeft="@dimen/between_col"
+		            android:paddingRight="@dimen/between_col"
+		            android:text="4/20"
+		            android:textSize="@dimen/normal" />
+		        
+		        <Button
+		            android:id="@+id/station_next"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="right"
+		            android:background="@drawable/button_next"
+		            android:onClick="nextStep"
+		            android:text="Next"
+		            android:textSize="@dimen/button" />
+		    
+		    </LinearLayout>
+		 </LinearLayout>
+		 
+		 <LinearLayout 
+		    android:baselineAligned="false"
+		    android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:orientation="horizontal"
+	        android:layout_gravity="center"
+	        android:layout_marginBottom="@dimen/middle_content"
+	        android:paddingBottom="@dimen/middle_content">
+
+		     <TextView
+		         android:id="@+id/station_name"
+		         android:layout_width="wrap_content"
+		         android:layout_height="wrap_content"
+		         android:layout_gravity="center"
+		         android:paddingLeft="@dimen/between_col"
+		         android:text="Question 2"
+		         android:textSize="@dimen/ssuper" />
+			
+		</LinearLayout>
+		 
+	</LinearLayout>
+</FrameLayout>

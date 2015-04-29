@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+	<LinearLayout 
+	    android:baselineAligned="false" 
+	    android:layout_width="wrap_content"
+	    android:layout_height="fill_parent"
+	    android:paddingLeft="@dimen/container_left"
+	    android:paddingRight="@dimen/container_right"
+	    android:layout_gravity="center"
+	    android:orientation="vertical" >
+
+		    <TextView
+		        android:id="@+id/textView1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="@dimen/middle_content"
+		        android:textSize="@dimen/heading"
+		        android:text="Well Done!" 
+		        android:layout_gravity="center"/>
+		
+		    <TextView
+		        android:id="@+id/fb_state"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="@dimen/big_gap"
+		        android:textSize="@dimen/normal"
+		        android:text="You have completed all the questions!" />
+		    
+		    <Button
+		        android:id="@+id/btn_upload"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:layout_marginTop="@dimen/big_gap"
+		        android:background="@drawable/button_next"
+		        android:onClick="uploadAll"
+		        android:text="Upload"
+		        android:textSize="@dimen/button" />
+
+		    <Button
+		        android:id="@+id/btn_amend"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:layout_marginTop="@dimen/big_gap"
+		        android:background="@drawable/button_next"
+		        android:onClick="prevStep"
+		        android:text="I still want to amend!"
+		        android:textSize="@dimen/button" />
+		    
+			<Button
+			    android:id="@+id/bt_upload"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center"
+			    android:layout_marginTop="@dimen/big_gap"
+			    android:background="@drawable/button_next"
+			    android:onClick="saveRecord"
+			    android:paddingLeft="@dimen/small_gap"
+			    android:paddingRight="@dimen/medium_gap"
+			    android:text="Save &amp; Restart"
+			    android:textSize="@dimen/button" />
+		
+	</LinearLayout>
+
+</FrameLayout>

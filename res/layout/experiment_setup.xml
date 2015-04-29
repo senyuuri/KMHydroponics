@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/container_left"
+        android:paddingRight="@dimen/container_right" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/container_left" >
+
+            <TextView
+                android:id="@+id/exp_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/medium_gap"
+                android:text="Problem 1"
+                android:textSize="@dimen/heading" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/medium_gap" >
+
+                <Button
+                    android:id="@+id/exp_prev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_previous"
+                    android:onClick="prevStep"
+                    android:text="Previous"
+                    android:textSize="@dimen/button" />
+
+                <TextView
+                    android:id="@+id/exp_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="@dimen/between_col"
+                    android:paddingRight="@dimen/between_col"
+                    android:text="4/20"
+                    android:textSize="@dimen/normal" />
+
+                <Button
+                    android:id="@+id/exp_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@drawable/button_next"
+                    android:onClick="nextStep"
+                    android:text="Next"
+                    android:textSize="@dimen/button" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/exp_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="What is/are the variable(s) your group need to keep constant or change in this experiment?"
+            android:textSize="@dimen/normal" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="600dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tablegrid"
+                    android:padding="@dimen/setup_gap"
+                    android:text="Variable"
+                    android:textSize="@dimen/mid" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tablegrid"
+                    android:gravity="center"
+                    android:padding="@dimen/setup_gap"
+                    android:text="Keep constant"
+                    android:textSize="@dimen/mid" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tablegrid"
+                    android:gravity="center"
+                    android:padding="@dimen/setup_gap"
+                    android:text="Change"
+                    android:textSize="@dimen/mid" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tablegrid"
+                    android:padding="@dimen/setup_gap"
+                    android:text="Location of set-ups"
+                    android:textSize="@dimen/mid" />
+
+                <RadioGroup
+                    android:id="@+id/exp_group1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/exp_btn1"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablegrid"
+                        android:gravity="center"
+                        android:padding="@dimen/setup_gap"
+                        android:textSize="@dimen/mid" />
+
+                    <RadioButton
+                        android:id="@+id/exp_btn2"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablegrid"
+                        android:gravity="center"
+                        android:padding="@dimen/setup_gap"
+                        android:textSize="@dimen/mid" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tablegrid"
+                    android:padding="@dimen/setup_gap"
+                    android:text="Type of seedlings used"
+                    android:textSize="@dimen/mid" />
+
+                <RadioGroup
+                    android:id="@+id/exp_group2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/exp_btn3"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablegrid"
+                        android:gravity="center"
+                        android:padding="@dimen/setup_gap"
+                        android:textSize="@dimen/mid" />
+
+                    <RadioButton
+                        android:id="@+id/exp_btn4"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablegrid"
+                        android:gravity="center"
+                        android:padding="@dimen/setup_gap"
+                        android:textSize="@dimen/mid" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tablegrid"
+                    android:padding="@dimen/setup_gap"
+                    android:text="Size of seedlings used"
+                    android:textSize="@dimen/mid" />
+
+                <RadioGroup
+                    android:id="@+id/exp_group3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/exp_btn5"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablegrid"
+                        android:gravity="center"
+                        android:padding="@dimen/setup_gap"
+                        android:textSize="@dimen/mid" />
+
+                    <RadioButton
+                        android:id="@+id/exp_btn6"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablegrid"
+                        android:gravity="center"
+                        android:padding="@dimen/setup_gap"
+                        android:textSize="@dimen/mid" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tablegrid"
+                    android:padding="@dimen/setup_gap"
+                    android:text="Size of containers used"
+                    android:textSize="@dimen/mid" />
+
+                <RadioGroup
+                    android:id="@+id/exp_group4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/exp_btn7"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablegrid"
+                        android:gravity="center"
+                        android:padding="@dimen/setup_gap"
+                        android:textSize="@dimen/mid" />
+
+                    <RadioButton
+                        android:id="@+id/exp_btn8"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablegrid"
+                        android:gravity="center"
+                        android:padding="@dimen/setup_gap"
+                        android:textSize="@dimen/mid" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tablegrid"
+                    android:padding="@dimen/setup_gap"
+                    android:text="Number of holes in each container cover"
+                    android:textSize="@dimen/mid" />
+
+                <RadioGroup
+                    android:id="@+id/exp_group5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/exp_btn9"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablegrid"
+                        android:gravity="center"
+                        android:padding="@dimen/setup_gap"
+                        android:textSize="@dimen/mid" />
+
+                    <RadioButton
+                        android:id="@+id/exp_btn10"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablegrid"
+                        android:gravity="center"
+                        android:padding="@dimen/setup_gap"
+                        android:textSize="@dimen/mid" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tablegrid"
+                    android:padding="@dimen/setup_gap"
+                    android:text="Size of holes in each container cover"
+                    android:textSize="@dimen/mid" />
+
+                <RadioGroup
+                    android:id="@+id/exp_group6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/exp_btn11"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablegrid"
+                        android:gravity="center"
+                        android:padding="@dimen/setup_gap"
+                        android:textSize="@dimen/mid" />
+
+                    <RadioButton
+                        android:id="@+id/exp_btn12"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablegrid"
+                        android:gravity="center"
+                        android:padding="@dimen/setup_gap"
+                        android:textSize="@dimen/mid" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tablegrid"
+                    android:padding="@dimen/setup_gap"
+                    android:text="Amount of growing medium in each container"
+                    android:textSize="@dimen/mid" />
+
+                <RadioGroup
+                    android:id="@+id/exp_group7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/exp_btn13"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablegrid"
+                        android:gravity="center"
+                        android:padding="@dimen/setup_gap"
+                        android:textSize="@dimen/mid" />
+
+                    <RadioButton
+                        android:id="@+id/exp_btn14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablegrid"
+                        android:gravity="center"
+                        android:padding="@dimen/setup_gap"
+                        android:textSize="@dimen/mid" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tablegrid"
+                    android:padding="@dimen/setup_gap"
+                    android:text="Type of growing medium"
+                    android:textSize="@dimen/mid" />
+
+                <RadioGroup
+                    android:id="@+id/exp_group8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/exp_btn15"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablegrid"
+                        android:gravity="center"
+                        android:padding="@dimen/setup_gap"
+                        android:textSize="@dimen/mid" />
+
+                    <RadioButton
+                        android:id="@+id/exp_btn16"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tablegrid"
+                        android:gravity="center"
+                        android:padding="@dimen/setup_gap"
+                        android:textSize="@dimen/mid" />
+                </RadioGroup>
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/exp_solution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/small_gap"
+            android:background="@drawable/button_next"
+            android:onClick="showSolution"
+            android:text="Submit"
+            android:textSize="@dimen/normal" />
+    </LinearLayout>
+
+</FrameLayout>

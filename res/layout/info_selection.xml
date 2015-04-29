@@ -1,0 +1,232 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+	<LinearLayout 
+	    android:baselineAligned="false" 
+	    android:layout_width="wrap_content"
+	    android:layout_height="fill_parent"
+	    android:paddingLeft="@dimen/container_left"
+	    android:paddingRight="@dimen/container_right"
+	    android:layout_gravity="center"
+	    android:orientation="vertical" >
+
+		    <Button
+		        android:id="@+id/btn_info_next"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="right"
+		        android:layout_marginTop="@dimen/big_gap"
+		        android:background="@drawable/button_next"
+		        android:onClick="nextStep"
+		        android:text="Next"
+ 			    android:textSize="@dimen/button"/>
+		    
+		    <TextView
+		        android:id="@+id/textView1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+	    		android:paddingLeft="@dimen/container_left"
+		        android:paddingTop="@dimen/medium_gap"
+		        android:textSize="@dimen/qn"
+		        android:text="Please select the group members' names and class." />
+		    
+		    <LinearLayout android:baselineAligned="false" 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+	    		android:paddingLeft="@dimen/container_left"
+			    android:layout_gravity="center"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="@dimen/small_gap" >
+			    
+		        <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="center"
+			        android:paddingRight="@dimen/big_gap"
+			        android:textSize="@dimen/normal"
+			        android:text="Class:" />
+		        
+			    <Spinner
+			        android:id="@+id/spinner_class"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="@dimen/normal"
+			        android:layout_gravity="center" />
+
+		    </LinearLayout>
+				
+		    <LinearLayout android:baselineAligned="false" 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center"
+			    android:orientation="horizontal" >
+		    
+		    <LinearLayout android:baselineAligned="false" 
+			    android:layout_width="0dp"
+			    android:layout_weight = "1"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center"
+			    android:orientation="vertical" >
+		    
+		    <LinearLayout android:baselineAligned="false" 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="@dimen/small_gap" >
+			    
+		        <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="center"
+			        android:paddingRight="@dimen/big_gap"
+			        android:textSize="@dimen/normal"
+			        android:text="Name:" />
+
+		        <Spinner
+		            android:id="@+id/spinner_name1"
+		            android:layout_width="wrap_content"
+			        android:textSize="@dimen/normal"
+		            android:layout_height="wrap_content" />
+
+		    </LinearLayout>
+		    
+		    <LinearLayout android:baselineAligned="false" 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="@dimen/small_gap" >
+			    
+		        <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="center"
+			        android:paddingRight="@dimen/big_gap"
+			        android:textSize="@dimen/normal"
+			        android:text="Name:" />
+		        
+			    <Spinner
+			        android:id="@+id/spinner_name2"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="@dimen/normal"
+			        android:layout_gravity="center" />
+
+		    </LinearLayout>
+		    
+		    <LinearLayout android:baselineAligned="false" 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="@dimen/small_gap" >
+			    
+		        <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="center"
+			        android:paddingRight="@dimen/big_gap"
+			        android:textSize="@dimen/normal"
+			        android:text="Name:" />
+		        
+			    <Spinner
+			        android:id="@+id/spinner_name3"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="@dimen/normal"
+			        android:layout_gravity="center" />
+
+		    </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:baselineAligned="false" 
+			    android:layout_width="0dp"
+			    android:layout_weight = "1"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center"
+			    android:orientation="vertical" >
+		    
+		    <LinearLayout android:baselineAligned="false" 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="@dimen/small_gap" >
+			    
+		        <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="center"
+			        android:paddingRight="@dimen/big_gap"
+			        android:textSize="@dimen/normal"
+			        android:text="Name:" />
+
+		        <Spinner
+		            android:id="@+id/spinner_name4"
+		            android:layout_width="wrap_content"
+			        android:textSize="@dimen/normal"
+		            android:layout_height="wrap_content" />
+
+		    </LinearLayout>
+		    
+		    <LinearLayout android:baselineAligned="false" 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="@dimen/small_gap" >
+			    
+		        <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="center"
+			        android:paddingRight="@dimen/big_gap"
+			        android:textSize="@dimen/normal"
+			        android:text="Name:" />
+		        
+			    <Spinner
+			        android:id="@+id/spinner_name5"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="@dimen/normal"
+			        android:layout_gravity="center" />
+
+		    </LinearLayout>
+		    
+		    <LinearLayout android:baselineAligned="false" 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="@dimen/small_gap" >
+			    
+		        <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="center"
+			        android:paddingRight="@dimen/big_gap"
+			        android:textSize="@dimen/normal"
+			        android:text="Name:" />
+		        
+			    <Spinner
+			        android:id="@+id/spinner_name6"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="@dimen/normal"
+			        android:layout_gravity="center" />
+
+		    </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
+		    
+
+
+	</LinearLayout>
+</FrameLayout>
